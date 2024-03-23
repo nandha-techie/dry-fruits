@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react({
     include: "**/*.jsx",
   })],
-  base: "/dry-fruits/",
+  base: "/",
   
 })
