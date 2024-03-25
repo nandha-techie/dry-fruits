@@ -38,46 +38,46 @@ const Signup = ()=>{
 
     return(
         <>
-            <div>
-                <form onSubmit={ handleSubmit }>
-                    <div>
-                        <label htmlFor="username" className="">
+            <div className="w-1/4 shadow shadow-sky-200 flex justify-center mx-auto my-10">
+                <form onSubmit={ handleSubmit } className="p-5">
+                    <div className="mb-2">
+                        <label htmlFor="username" className="block mb-1">
                                 Username
                             </label>
                         <input
                         id="username"
                         name="username"
-                        className="border border-gray-300"
+                        className="border border-gray-300 mb-1"
                         value={values.username}
                         onChange={handleChange}
                         onBlur={handleBlur}
                         />
                         {errors.username && touched.username ? (
-                            <small className="">
+                            <small className="block text-red-500">
                               {errors.username}
                             </small>
                           ) : null}
                     </div>
-                    <div>
-                        <label htmlFor="email" className="">
+                    <div className="mb-2">
+                        <label htmlFor="email" className="block mb-1">
                             Email
                           </label>
                           <input
                             id="email"
                             name="email"
-                            className="border border-gray-300"
+                            className="border border-gray-300 mb-1"
                             value={values.email}
                             onChange={handleChange}
                             onBlur={handleBlur}
                           />
                           {errors.email && touched.email ? (
-                            <small className="">
+                            <small className="block text-red-500">
                               {errors.email}
                             </small>
                           ) : null}
                     </div> 
-                    <div className="col text-left">
-                          <label htmlFor="password" className="form-label">
+                    <div className="mb-2">
+                          <label htmlFor="password" className="block mb-1">
                             Password
                           </label>
                           <input
@@ -90,32 +90,32 @@ const Signup = ()=>{
                             type="password"
                           />
                           {errors.password && touched.password ? (
-                            <small className="text-danger mt-1">
+                            <small className="block text-red-500">
                               {errors.password}
                             </small>
                           ) : null}
                         </div>
-                        <div className="col text-left">
-                          <label htmlFor="repassword" className="form-label">
+                        <div className="mb-2">
+                          <label htmlFor="repassword" className="block mb-1">
                             Confirm Password
                           </label>
                           <input
                             id="repassword"
                             name="repassword"
-                            className="border border-gray-300"
+                            className="border border-gray-300 mb-1"
                             value={values.repassword}
                             onChange={handleChange}
                             onBlur={handleBlur}
                             type="password"
                           />
                           {errors.repassword && touched.repassword ? (
-                            <small className="text-danger mt-1">
+                            <small className="block text-red-500">
                               {errors.repassword}
                             </small>
                           ) : null}
                         </div>   
                     <div>
-                      <button type="submit" className="bg-gray-300 p-2">Submit</button>
+                      <button type="submit" className="bg-sky-400 hover:bg-sky-500 rounded text-white py-1 px-2 mt-2">Submit</button>
                     </div>
                 </form>
             </div>

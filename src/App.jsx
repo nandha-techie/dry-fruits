@@ -38,15 +38,15 @@ function App() {
       {
         path: "signup",
         element: <Signup />,
-      },
-      {
-        basename: "/dry-fruits",
       }
     ]
     
   },
-  
-]);
+],
+{
+  basename: "/dry-fruits",
+}
+);
 
   return (
     <>

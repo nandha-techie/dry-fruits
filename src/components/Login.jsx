@@ -51,29 +51,30 @@ useEffect(()=>{
 
     return(
         <>
-            <div>
+            <div className="w-1/4 shadow shadow-sky-200 flex justify-center mx-auto my-10">
                 <form onSubmit={ handleSubmit }>
-                    
-                    <div>
-                        <label htmlFor="email" className="">
+                    <h2 className="text-center text-2xl font-extrabold text-gray-900 mb-4">Login</h2>
+                    <div className="mb-3">
+                        <label htmlFor="email" className="block mb-1">
                             Email
                           </label>
                           <input
                             id="email"
                             name="email"
-                            className="border border-gray-300"
+                            className="border border-gray-300 "
                             value={values.email}
                             onChange={handleChange}
                             onBlur={handleBlur}
+                            style={{outlineWidth: '0.5px'}}
                           />
                           {errors.email && touched.email ? (
-                            <small className="">
+                            <small className="block text-red-500	mt-1">
                               {errors.email}
                             </small>
                           ) : null}
                     </div> 
-                    <div className="col text-left">
-                          <label htmlFor="password" className="form-label">
+                    <div className="mb-3">
+                          <label htmlFor="password" className="block mb-1">
                             Password
                           </label>
                           <input
@@ -86,16 +87,16 @@ useEffect(()=>{
                             type="password"
                           />
                           {errors.password && touched.password ? (
-                            <small className="text-danger mt-1">
+                            <small className="block text-red-500 mt-1">
                               {errors.password}
                             </small>
                           ) : null}
                     </div>
-                    <div>
-                      <Link to="/signup">New customer</Link>
+                    <div className="mb-2 text-right">
+                      <Link to="/signup" className="text-sky-600 text-base hover:text-sky-800">Or new customer</Link>
                     </div>
-                    <div>
-                      <button type="submit" className="bg-gray-300 p-2">Submit</button>
+                    <div className="mb-4">
+                      <button type="submit" className="bg-sky-400 hover:bg-sky-500 rounded text-white py-1 px-2">Submit</button>
                     </div>
                 </form>
             </div>
